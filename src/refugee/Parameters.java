@@ -2,7 +2,7 @@ package refugee;
 
 class Parameters {
 
-	public static double TEMPORAL_RESOLUTION = 0.4;// steps per hour
+	public static double TEMPORAL_RESOLUTION = 0.3;// steps per hour
 	//public static int NUM_ORIG_REFUGEES = 1;
 	//public static int NUM_ORIG_PLACES = 7;
 	public static int TRIALNO = 0;
