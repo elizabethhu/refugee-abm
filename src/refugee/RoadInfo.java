@@ -14,7 +14,7 @@ class RoadInfo {
 	private int to; // to City ID
 	private double distance;
 	private double speed;
-	private int population;
+	private int popularity;
 	private double spop;
 	private double cost;
 	private double transportLevel;
@@ -22,7 +22,7 @@ class RoadInfo {
 
 	public RoadInfo(Geometry path, int from, int to, double speed, double spop, double distance, double cost, double transportLevel,
 			double deaths) {
-		this.population = 0; // starts with no one traveling
+		this.popularity = 0; // starts with no one traveling
 		this.path = path;
 		this.from = from;
 		this.to = to;
@@ -43,7 +43,7 @@ class RoadInfo {
 	 * return location; }
 	 */
 	public void addPeople(int n) {
-		this.population += n;
+		this.popularity += n;
 	}
 
 	public double getDistance() {
