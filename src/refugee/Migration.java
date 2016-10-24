@@ -33,6 +33,7 @@ class Migration extends SimState {
 	public int pop_height;
 	public int world_width;
 	public int world_height;
+	public int max_pop;
 	public int total_scaled_pop = 0; // number of agents in the model (scaled
 										// from total_pop)
 	public long total_pop = 0; // actual population (not scaled)

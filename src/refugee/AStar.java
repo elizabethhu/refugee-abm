@@ -57,6 +57,7 @@ public class AStar {
 
 			AStarCityWrapper x = openSetQueue.peek();
 			//AStarCityWrapper x = findMin(openSet);
+			System.out.println();
 			System.out.println("Peek: " + x.city.getName());
 			if (x == null) {
 				AStarCityWrapper n = findMin(openSet);
@@ -97,11 +98,21 @@ public class AStar {
 				// otherwise evaluate the cost of this City/edge combo
 				RoadInfo edge = (RoadInfo) e.getInfo();
 				// System.out.println(edge.getWeightedDistance());
-				double edgeweight = edge.getWeightedDistance() * Parameters.DISTANCE_WEIGHT
-						+ edge.getSpeed() * Parameters.SPEED_WEIGHT - edge.getScaledPopulation() * Parameters.POP_WEIGHT
-						+ edge.getScaledCost() * Parameters.COST_WEIGHT
-						+ edge.getTransportLevel() * Parameters.TRANSPORT_LEVEL_WEIGHT
-						+ edge.getDeaths() * Parameters.RISK_WEIGHT * refugee.dangerCare();
+				double distanceValueWeight = edge.getWeightedDistance() * Parameters.DISTANCE_WEIGHT;
+				System.out.println("Distance: " + distanceValueWeight);
+				double speedValueWeight = edge.getSpeed() * Parameters.SPEED_WEIGHT ;
+				System.out.println("speed: " + speedValueWeight);
+				double populationValueWeight = edge.getScaledPopulation() * Parameters.POP_WEIGHT;
+				System.out.println("population: " + populationValueWeight);
+				double costValueWeight =  edge.getScaledCost() * Parameters.COST_WEIGHT;
+				System.out.println("cost: " + costValueWeight);
+				double popularityValueWeight = edge.getPopularity() * Parameters.POPULARITY_WEIGHT;
+				System.out.println("popularity: " + popularityValueWeight);
+				double transportValueWeight = edge.getTransportLevel() * Parameters.TRANSPORT_LEVEL_WEIGHT;
+				double deathValueWeight = edge.getDeaths() * Parameters.RISK_WEIGHT * refugee.dangerCare();
+				System.out.println("death: " + deathValueWeight);
+				double edgeweight = distanceValueWeight + speedValueWeight + populationValueWeight + costValueWeight + popularityValueWeight + transportValueWeight + deathValueWeight;
+				System.out.println("Popularity: " + popularityValueWeight);
 				System.out.println(edge.getScaledPopulation());
 				System.out.println("gx: " + x.gx + " edgeweight: " + edgeweight);
 				double tentativeCost = x.gx + edgeweight; // changed from

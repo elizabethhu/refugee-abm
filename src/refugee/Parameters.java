@@ -11,10 +11,10 @@ class Parameters {
 	public static double AVG_FAMILY_SIZE = 6.3; // http://www.acted.org/en/food-security-situation-and-livelihood-intervention-opportunities-syrians-refugees-and-host-communit
 	public static double FAMILY_SIZE_SD = 2.92; // same as above
 	// -------Agent City Care Weights-------//
-	public static double DANGER_CARE_WEIGHT = 0.2;
-	public static double FAMILY_ABROAD_CARE_WEIGHT = 0.2;
-	public static double POP_CARE = 0.75;
-	public static double ECON_CARE = 0.75;
+	public static double DANGER_CARE_WEIGHT = 0.1;
+	public static double FAMILY_ABROAD_CARE_WEIGHT = 0.1;
+	public static double POP_CARE = 0.4;
+	public static double ECON_CARE = 0.4;
 	//-------Agent Decision Weights----//
 	public static double GOAL_CHANGE_PROB = 0.1;
 	// -------Edge Weights-------//
@@ -31,6 +31,7 @@ class Parameters {
 	public static double POP_WEIGHT = 10.0;
 	public static double TRANSPORT_LEVEL_WEIGHT = 0.1;//0.1;
 	public static double HEU_WEIGHT = 1/19348237.217718;
+	public static double POPULARITY_WEIGHT = 1/TOTAL_POP;
 
 	public static double POP_BLOCK_METERS = 926.1;// Height and width of one
 													// population block.
