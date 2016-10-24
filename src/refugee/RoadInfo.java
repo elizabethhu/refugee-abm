@@ -44,9 +44,9 @@ class RoadInfo {
 	 */
 	public void addPeople(int n) {
 		this.popularity += n;
-		if (popularity > MigrationBuilder.migrationSim.max_pop){
-			MigrationBuilder.migrationSim.max_pop = popularity;
-		}
+		//if (popularity > MigrationBuilder.migrationSim.max_pop){
+		//	MigrationBuilder.migrationSim.max_pop = popularity;
+		//}
 	}
 	
 	public double getPopularity(){

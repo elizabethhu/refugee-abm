@@ -151,6 +151,7 @@ class RefugeeFamily implements Steppable {
 					currentCity = city;
 					RoadInfo einfo = (RoadInfo) this.currentEdge.getInfo();
 					this.finStatus -= (einfo.getCost()*this.familyMembers.size());//if at the end of an edge, subtract the money
+					einfo.addPeople(this.familyMembers.size());
 					//city.addMembers(this.familyMembers);
 					for (Object or: this.familyMembers){
 						Refugee rr = (Refugee)or;
